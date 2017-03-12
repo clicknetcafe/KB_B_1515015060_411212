@@ -1,0 +1,55 @@
+
+implement and end implement
+Di antara semua kata kunci yang dibahas di sini, keyword ini digunakan sebagai pasangan. 
+Visual Prolog mengatur kode yang ditulis antara dua keyword diatas sebagai satu kelas. 
+Nama kelas harus diberikan setelah menerapkan keyword.
+_____________________________________________________________________________________________________________________
+
+open
+Kata kunci ini digunakan untuk memperluas visibilitas lingkup kelas. 
+Keyword ini digunakan jika ada deklarasi implement keyword.
+_____________________________________________________________________________________________________________________
+
+constant
+Kata kunci ini digunakan untuk menandai bagian dari kode yang mendefinisikan beberapa nilai yang umum 
+digunakan dalam kode program. Misalnya, jika string "PDC Prolog" ingin digunakan di beberapa 
+lokasi di kode program, maka kita dapat menentukan mnemonic (isian pendek, kata yang mudah diingat), deklarasinya:
+	constant
+    	    pdc = "PDC Prolog".
+Perhatikan bahwa definisi dari ujung konstan dalam periode (.). Tidak seperti variabel Prolog, 
+constants harus menjadi kata yang dimulai dengan huruf kecil.
+_____________________________________________________________________________________________________________________
+
+domains
+Keyword ini digunakan untuk menandai bagian menyatakan fakta yang akan digunakan dalam kode. 
+Ada banyak variasi untuk sintaks deklarasi domain tersebut, dan semuanya memenuhi semua jenis kemungkinan 
+domain yang akan digunakan nanti dalam kode. 
+_____________________________________________________________________________________________________________________
+
+class facts
+Keyword ini menunjuk bagian, yang menyatakan fakta-fakta yang akan digunakan nanti dalam kode program. 
+Semuanya dinyatakan dengan nama yang digunakan untuk menandakan fakta dan argumen yang digunakan untuk 
+fakta masing-masing bersama dengan domain yang dimiliki.
+_____________________________________________________________________________________________________________________
+
+class predicates
+Bagian ini berisi deklarasi predikat yang akan kemudian didefinisikan dalam bagian klausa kode. Sekali lagi, 
+nama-nama yang akan digunakan untuk predikat ini bersama dengan argumen dan domain, dimana argumennya, 
+akan ditunjukkan di bagian ini.
+_____________________________________________________________________________________________________________________
+
+clauses
+Dari semua bagian yang hadir dalam kode Visual Prolog, keyword ini lebih mendekatir ke bahasa
+program tradisional Prolog. Ini berisi definisi sebenarnya dari predikat sebelumnya dinyatakan. 
+Dan kita akan menemukan bahwa predikat yang digunakan di sini akan mengikuti sintaks sebagaimana 
+dinyatakan di bagian kelas predikat. 
+_____________________________________________________________________________________________________________________
+
+goal
+Bagian ini mendefinisikan titik masuk utama ke program Visual Prolog.
+Dalam Prolog versi lama, setiap kali predikat didefinisikan dalam kode, sistem dapat diperintahkan untuk 
+memulai eksekusi kode dari predikat itu dan seterusnya. Namun, itu tidak terjadi dengan Visual Prolog. 
+Menjadi kompilator memiliki tugas seefisien mungkin mengeksekusi kode untuk program yang kita tulis.
+Kode ini tidak akan benar-benar berjalan pada saat yang sama compiler melakukan tugasnya. Oleh karena itu, 
+compiler perlu tahu terlebih dahulu predikat yang tepat dari mana eksekusi kode akan mulai, sehingga nanti pada 
+saat program ini disebut untuk melakukan, dapat melakukannya dari titik awal yang benar. 
